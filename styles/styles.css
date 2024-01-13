@@ -1,0 +1,240 @@
+/* common styles */
+* {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* 
+font-family: 'Inter', sans-serif;
+font-family: 'Manrope', sans-serif;
+font-family: 'Poppins', sans-serif;
+
+
+*/
+
+body{
+    margin-bottom: 200px;
+}
+/*------------------nav styles--------------------*/
+header {
+  margin: 6rem 8rem;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav > div {
+  margin: 0px;
+}
+
+.nav-title {
+  color: #3a3a3a;
+  font-family: Poppins;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav-links ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links ul li {
+  list-style: none;
+  margin-right: 2rem;
+}
+.nav-links ul a {
+  text-decoration: none;
+  color: #3a3a3a;
+  font-family: Poppins;
+  font-weight: 600;
+}
+
+.nav-links ul img {
+  width: 32px;
+}
+.search {
+  margin-right: 2rem;
+}
+
+/* ---------------------banner styles--------------- */
+.banner-container {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.banner-text h3 {
+  color: #3a3a3a;
+  font-family: Poppins;
+  font-size: 3.25rem;
+  font-weight: 700;
+}
+
+.banner-text > p {
+  color: #3a3a3a;
+  font-family: Poppins;
+  font-weight: 600;
+}
+
+.banner-text button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin: 1.12rem 0rem;
+  padding: 10px 1.5rem;
+  border-radius: 2.5rem;
+  border: none;
+  background: #e02c6d;
+  color: white;
+}
+
+.banner-text button p {
+  font-family: Poppins;
+  font-weight: 700;
+}
+
+.banner-img {
+  background-image: url("../images/Circle-design.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 30px 30px 30px 2px;
+}
+
+/* ------------------main styles--------------- */
+/* ---------------------partners section-------------- */
+.partners {
+  margin: 3rem 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ---------------------popular section---------------- */
+.popular{
+    margin: 6rem 12.25rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2.8rem;
+    row-gap: 1.875rem;
+}
+.card-container {
+  padding: 17px 14px;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  width: 329px;
+  height: 476px;
+  text-align: center;
+}
+
+.image-container img{
+    width: 100%;
+
+}
+
+.card-container .text-container {
+  text-align: start;
+}
+
+.card-container .text-container h4 {
+  color: #18191f;
+  font-family: Poppins;
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+.card-container .text-container h5 {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: Inter;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  margin-top: 6px;
+}
+
+.card-container .text-container p {
+  color:  #787885;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 143%;
+}
+
+/*+++++++++++++++++++ responsive styles+++++++++++++++*/
+/* =================mobile devices================== */
+
+@media screen and (max-width: 576px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .banner-container {
+    flex-direction: column-reverse;
+  }
+
+  header {
+    margin: 1rem;
+  }
+  .nav-links {
+    margin-top: 1rem;
+  }
+  .nav-links ul,
+  .partners {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .banner-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner-text h3 {
+    font-size: 1.75rem;
+  }
+  .banner-text p {
+    font-size: 14px;
+  }
+
+  .banner-text button p {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .banner-img {
+    width: 80%;
+  }
+  .banner-img img {
+    width: 100%;
+  }
+
+  .partners {
+    margin: 1rem 1rem;
+  }
+
+  .popular{
+    grid-template-columns: repeat(1, 1fr);
+    margin: 2rem 1rem;
+  }
+}
+
+/* tablet devices */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  header {
+    margin: 2rem 1.5rem;
+  }
+  .banner-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .banner-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
